@@ -1,0 +1,132 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:u="sap.ui.unified"
+	controllerName="valoremapp.ValoremAppHTML.controller.NotasFinancieros" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Notas a Estados Financieros">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button type="Back" press="handlePressConfiguration"/>
+					<Image src="./img/valorem_icon.png" width="140px" height="35px"/>
+				</contentLeft>
+				<contentRight>
+					<Button icon="sap-icon://log" text="Log off" type="Transparent" press="handleUserItemPressed"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<Bar>
+				<contentLeft>
+					<Text text="Notas a estados financieros"></Text>
+				</contentLeft>
+			</Bar>
+			<IconTabBar id="idIconTabBar" class="sapUiResponsiveContentPadding" selectedKey="Crear" select="onSelectCreate" expand="onExpandAnyFilter">
+				<items>
+					<IconTabFilter id="idIconTabNotasIndividuales" icon="sap-icon://create-form" text="Notas Individuales" key="NotasIndividuales"
+						design="Horizontal">
+						<Table id="idNotasIndividualesTable">
+							<columns>
+								<Column width="12em">
+									<Text text="DESCRIPCIÓN"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF01_INFORME_ANUAL I" press="onDowload('IF01_INFORME_ANUAL I.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF02_INFORME_ANUAL II" press="onDowload('IF02_INFORME_ANUAL II.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF03_INFORME_ANUAL_IMPUESTOS" press="onDowload('IF03_INFORM_ANUAL_IMPUESTOS.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF04_OBLIGATORIAS_SS" press="onDowload('IF04_OBLIGATORIAS_SS.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF05_NOTA900009_TMP" press="onDowload('IF05_NOTA900009_TMP.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF06_FLUJO_DE_EFECTIVO_INDIRECTO_SS" press="onDowload('IF06_FLUJO_DE_EFECTIVO_INDIRECTO_SS.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF07_OPTATIVAS_SS" press="onDowload('IF07_OPTATIVAS_SS.xlsm')"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+					<IconTabSeparator id="idSeparatorCreate"/>
+					<IconTabFilter id="idIconTabNotasConsolidadas" icon="sap-icon://validate" text="Notas Consolidadas" key="NotasConsolidadas"
+						design="Horizontal">
+						<Table id="idNotasConsolidadasTable">
+							<columns>
+								<Column width="12em">
+									<Text text="DESCRIPCIÓN"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Link text="IF01_INFORME_ANUAL I" target="_blank" href="http://www.sap.com"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP02_INFORME_ANUAL 900005_CONSOLIDADO"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP03_INFORME_ANUAL 900008_CONSOLIDADO"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP04_INFORME_ANUAL 900009_CONSOLIDADO"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP05_INFORME_ANUAL 900018_CONSOLIDADO"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP06_INFORME_ANUAL_II_CONSOLIDADOS"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="RP07_INFORME_ANUAL_IMPUES_CONSOLIDADO"/>
+									</cells>
+								</ColumnListItem>
+								<ColumnListItem>
+									<cells>
+										<Link text="SEGMENTOS_RP_FINANCIEROS"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,159 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "valoremapp.ValoremAppHTML",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "valoremapp.ValoremAppHTML.view.root",
+			"type": "HTML",
+			"async": true,
+			"id": "login"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "valoremapp.ValoremAppHTML.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "HTML",
+				"async": true,
+				"viewPath": "valoremapp.ValoremAppHTML.view",
+				"controlAggregation": "pages",
+				"controlId": "root_v",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "login",
+					"pattern": "",
+					"target": [
+						"login"
+					]
+				},
+				{
+					"name": "CambiarClave",
+					"pattern": "CambiarClave",
+					"target": [
+						"CambiarClave"
+					]
+				},
+				{
+					"name": "Proceso_Consolidacion",
+					"pattern": "Proceso_Consolidacion",
+					"target": [
+						"Proceso_Consolidacion"
+					]
+				},
+				{
+					"name": "mainMenu",
+					"pattern": "mainMenu",
+					"target": [
+						"mainMenu"
+					]
+				},
+				{
+					"name": "NotasFinancieros",
+					"pattern": "NotasFinancieros",
+					"target": [
+						"NotasFinancieros"
+					]
+				}
+			],
+			"targets": {
+				"login": {
+					"viewType": "HTML",
+					"viewName": "login",
+					"parent": "root",
+					"viewLevel": 1
+				},
+				"CambiarClave": {
+					"controlId": "",
+					"parent": "login",
+					"viewType": "HTML",
+					"viewName": "CambiarClave",
+					"viewLevel": 2
+				},
+				"Proceso_Consolidacion": {
+					"controlId": "",
+					"viewType": "XML",
+					"viewName": "Proceso_Consolidacion",
+					"parent": "login",
+					"viewLevel": 4
+				},
+				"root": {
+					"viewType": "HTML",
+					"viewName": "root"
+				},
+				"mainMenu": {
+					"viewType": "XML",
+					"viewName": "mainMenu",
+					"viewLevel": 3
+				},
+				"NotasFinancieros": {
+					"controlId": "",
+					"viewType": "XML",
+					"viewName": "NotasFinancieros",
+					"parent": "login",
+					"viewLevel": 5
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

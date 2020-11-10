@@ -1,0 +1,52 @@
+<mvc:View controllerName="valoremapp.ValoremAppHTML.controller.mainMenu" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" height="100%">
+	<!--<f:ShellBar title="" secondTitle="intranet" homeIcon="./img/valorem_icon.png" showNavButton="true" class="shell">-->
+	<!--</f:ShellBar>-->
+	<App>
+		<Page showHeader="false">
+		<content>
+	<u:Shell class="shellClassIcon" id="myShell" icon="./img/valorem_icon.png">
+		<u:user>
+			<u:ShellHeadUserItem showPopupIndicator="false" image="sap-icon://log" username="Log Off" press="handleUserItemPressed"/>
+		</u:user>
+	</u:Shell>
+	<Panel class="panelClass" height="80px"></Panel>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Proceso de Consolidación Estados Financieros " press="press_consolidacion">
+		<TileContent >
+			<ImageContent src="sap-icon://process"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Notas a Estados Financieros" press="press_notasFinancieros">
+		<TileContent >
+			<ImageContent src="sap-icon://notes"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Informe de Junta" press="press">
+		<TileContent >
+			<ImageContent src="sap-icon://manager-insight"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Otros Informes VALOREM" press="press">
+		<TileContent >
+			<ImageContent src="sap-icon://add-activity"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Otros Informes Refocosta" press="press">
+		<TileContent >
+			<ImageContent src="sap-icon://add-coursebook"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Otros KOBA" press="press">
+		<TileContent >
+			<ImageContent src="sap-icon://add-product"/>
+		</TileContent>
+	</GenericTile>
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Otros Caracol" press="press">
+		<TileContent >
+			<ImageContent src="sap-icon://create-entry-time"/>
+		</TileContent>
+	</GenericTile>
+	</content>
+	</Page>
+	</App>
+</mvc:View>
